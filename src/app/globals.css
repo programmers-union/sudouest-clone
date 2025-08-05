@@ -1,14 +1,4 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
 
 html,
 body {
@@ -17,9 +7,8 @@ body {
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+
+  font-family: var(--font-cormorant), serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
@@ -39,4 +28,149 @@ a {
   html {
     color-scheme: dark;
   }
+}
+
+
+/* ....................Header styles........................... */
+
+.width100 {
+  width: 70%;
+  margin: 0 auto;
+}
+
+.icon-size {
+  font-size: 1.60rem;
+}
+
+.icon-name-size {
+  font-size: x-small;
+}
+
+.logo {
+  padding-right: 70px;
+}
+
+.small-text {
+  font-size: 0.700rem;
+}
+
+.header-bottom {
+  padding-right: 20px;
+}
+
+@media (max-width: 768px) {
+  .overflow-auto {
+    white-space: nowrap;
+  }
+}
+
+
+
+/* ....................News Card styles.............................. */
+
+.overlayText {
+  bottom: 0;
+  left: 0;
+  padding: 1.5rem;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), transparent 70%);
+  width: 100%;
+}
+.newscard-img{
+  width: 990px; 
+  height: 500px;
+}  
+
+
+/* ...................RegionalNews component styles.......................... */
+
+ .dot {
+  width: 6px;
+  height: 6px;
+  background-color: red;
+  border-radius: 50%;
+  display: inline-block;
+  margin-top: 2px;
+}
+
+
+/* .......................NewsCard2 component styles..................... */
+
+/* .rounded-card{
+  border-radius: 1rem;
+} */
+
+.custom-btn-outline-red {
+    color: #d62e1e; /* Red text color */
+    border: 2px solid #d62e1e; /* Red border */
+    border-radius: 50px; /* Fully rounded corners */
+    font-weight: bold;
+    padding: 8px 20px;
+    background-color: transparent;
+    transition: all 0.2s ease-in-out;
+  }
+
+  .custom-btn-outline-red:hover {
+    background-color: #d62e1e;
+    color: #fff;
+    text-decoration: none;
+  }
+
+
+  /* ..............................VideoCard components.......................... */
+
+  .video-image{
+    width: 400px;
+    height: 400px;
+  }
+
+  /* ...........category page ad style.............. */
+
+ /* Sticky Ad Styles */
+.sidebar-container {
+  position: relative;
+  height: 100%;
+}
+
+.sticky-ad-wrapper {
+  position: sticky;
+  top: 20px; /* Adjust this value based on your header height */
+  z-index: 100;
+  height: fit-content;
+  /* Ensure it doesn't go beyond viewport */
+  max-height: calc(100vh - 40px);
+  overflow: hidden;
+}
+
+.sticky-ad-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px; /* Optional: add some border radius */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: add subtle shadow */
+}
+
+/* Main content styling to ensure proper scrolling */
+.main-content {
+  /* Add minimum height to ensure scrolling works */
+  min-height: 150vh;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991.98px) {
+  .sticky-ad-wrapper {
+    position: static;
+    top: auto;
+    margin-bottom: 2rem;
+  }
+}
+
+/* Optional: Hide sticky ad on very small screens */
+@media (max-width: 767.98px) {
+  .sticky-ad-wrapper {
+    display: none;
+  }
+}
+
+/* Smooth scrolling for better user experience */
+html {
+  scroll-behavior: smooth;
 }
