@@ -34,9 +34,53 @@ a {
 /* ....................Header styles........................... */
 
 .width100 {
-  width: 70%;
+  width: 90%;
   margin: 0 auto;
 }
+
+/* Small mobile (≤320px) */
+@media (max-width: 320px) {
+  .width100 {
+    width: 100%;
+  }
+}
+
+/* Medium mobile (321px - 375px) */
+@media (min-width: 321px) and (max-width: 375px) {
+  .width100 {
+    width: 100%;
+  }
+}
+
+/* Large mobile (376px - 425px) */
+@media (min-width: 376px) and (max-width: 425px) {
+  .width100 {
+    width: 100%;
+  }
+}
+
+/* XL mobile (426px - 575px) */
+@media (min-width: 426px) and (max-width: 575px) {
+  .width100 {
+    width: 100%;
+  }
+}
+
+/* Tablets (576px - 767px) */
+@media (min-width: 576px) and (max-width: 767px) {
+  .width100 {
+    width: 100%;
+  }
+}
+
+/* Medium devices and up (≥768px) */
+@media (min-width: 768px) {
+  .width100 {
+    width: 100%;
+  }
+}
+
+
 
 .icon-size {
   font-size: 1.60rem;
@@ -174,3 +218,6 @@ a {
 html {
   scroll-behavior: smooth;
 }
+
+/* ............width100 mediaquery................ */
+
