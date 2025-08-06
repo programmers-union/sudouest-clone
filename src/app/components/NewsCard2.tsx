@@ -1,6 +1,7 @@
 // components/NewsCard.js
 import Image from "next/image";
 import sampleImg from "../public/sample.jpg"; 
+import Link from "next/link";
 
 interface NewsCard2SectionProps {
   imageSrc: string;
@@ -23,6 +24,7 @@ const NewsCard2: React.FC<NewsCard2SectionProps> = ({
 
 }) => {
   return (
+     <Link href={`/${category.toLowerCase()}/${slug}`} className='text-decoration-none text-reset'>
 <div className="overflow-hidden">
   <div className="position-relative">
     <Image
@@ -43,7 +45,7 @@ const NewsCard2: React.FC<NewsCard2SectionProps> = ({
     <h6 className="card-title fw-bold mb-0">{title}</h6>
   </div>
 </div>
-
+</Link>
   );
 }
 

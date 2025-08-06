@@ -120,6 +120,8 @@ export default async function CategoryPage({ params }: PageProps) {
                   subtitle={article.shortdescription}
                   imageSrc={article.image}
                   imageAlt={article.title}
+                  category={article.category}
+                  slug={article.slug}
                 />
               </div>
             ))}

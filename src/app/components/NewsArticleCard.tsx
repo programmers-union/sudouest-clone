@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import Link from 'next/link';
 
 interface NewsArticleCardProps{
 imageSrc: string;
@@ -19,6 +20,7 @@ const NewsArticleCard: React.FC<NewsArticleCardProps> = ({
 
 }) => {
   return (
+     <Link href={`/${category.toLowerCase()}/${slug}`} className='text-decoration-none text-reset'>
     <div className="card border-0 rounded shadow-sm overflow-hidden mb-4">
       {/* Image */}
       <Image
@@ -49,8 +51,11 @@ const NewsArticleCard: React.FC<NewsArticleCardProps> = ({
         </p>
       </div>
     </div>
+    </Link>
   )
+  
 }
+
 
 
 export default NewsArticleCard;
